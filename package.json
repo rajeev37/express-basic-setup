@@ -1,0 +1,35 @@
+{
+  "name": "express-basic-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint -c .eslintrc -f checkstyle . --ext .js -o ./reports/eslint.xml",
+    "start": "cross-env NODE_ENV=production nodemon index.js",
+    "start:dev": "cross-env NODE_ENV=dev nodemon index.js",
+    "start:mock": "cross-env NODE_ENV=mock nodemon index.js"
+  },
+  "author": "Rajeev",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.5.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.14",
+    "nodemon": "^2.0.15",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.2.0"
+  },
+  "devDependencies": {
+    "ghooks": "^2.0.4"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}

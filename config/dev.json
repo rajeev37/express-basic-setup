@@ -1,0 +1,7 @@
+{
+    "port": 4000,
+    "domain": "http://localhost:4000",
+    "mongo": {
+        "url": "mongodb+srv://admin:admin@cluster0.0kyq7.mongodb.net/demoDB?retryWrites=true&w=majority"
+    }
+}
